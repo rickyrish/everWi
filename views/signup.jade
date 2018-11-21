@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+	head
+		title EverWI
+		meta(charset="utf-8")
+		link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+		link(href="/public/css/login.css", rel="stylesheet")
+	body(class="text-center")
+		form(class="form-signin",action="/registrar", method="POST", enctype="multipart/form-data")
+			h1(class="h3 mb-3 font-weight-normal") ingrese sus datos
+			label(for="inputUsername",class="sr-only")
+			input(type="text",id="inputUsername",name="inputUsername",class="form-control",placeholder="Usuario corto",required,autofocus)
+			label(for="inputEmail",class="sr-only") Email
+			input(type="email",id="inputEmail",name="inputEmail",class="form-control",placeholder="Correo electronico",required)
+			label(for="inputPassword" class="sr-only") Password
+			input(type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" required)
+			label(for="inputPasswordC" class="sr-only") Password
+			input(type="password" id="inputPasswordC" name="inputPasswordC" class="form-control" placeholder="confirme contraseña" required)
+			div(class="checkbox mb-3")
+				button(class="btn btn-lg btn-primary btn-block",type="submit") Registrarse
