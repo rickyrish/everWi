@@ -4,8 +4,9 @@ mongoose.connect("mongodb://localhost/everwi",{useNewUrlParser: true});
 
 var project_schema = new Schema({
 		codProj: {type:String, required: true},
+		nameProj : {type:String, required: true},
 		description: {type:String, required: true},
-		createDate: {type:Date, requred:true}
+		createDate: {type:Date, requred:true},
 		creator: {type: Schema.Types.ObjectId, ref: "User"}
 });
 

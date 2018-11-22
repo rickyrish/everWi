@@ -1,0 +1,24 @@
+extends ../../layout.jade
+block contenido
+	main(role="main",class="container")
+		div(class="row")
+			div(class="col-4")
+				a(class="btn btn-primary" href="/app/projects/new" role="button") Nuevo Proyecto
+		div(class="row") &nbsp;
+		div(class="row")
+			table(class="table table-hover")
+				thead
+					tr
+						th(scope="col") Código de proyecto
+						th(scope="col") Nombre del Proyecto
+						th(scope="col") Opciones
+				tbody
+					for proyecto in proyectos
+						tr
+							th(scope="row") #{proyecto.codProj}
+							th #{proyecto.nameProj}
+							th
+								a(href="/app/projects/edit/#{proyecto._id}" class="editIcons") 
+									i(class="fas fa-edit")
+								a(href="/app/projects/delete/#{proyecto._id}" class="editIcons")
+									i(class="fas fa-trash-alt")

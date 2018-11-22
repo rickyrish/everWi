@@ -1,0 +1,17 @@
+extends ../../layout.jade
+block contenido
+	main(role="main",class="container")
+		div(class="row justify-content-md-center")
+			form(action="/app/projects/new", method="POST", enctype="multipart/form-data")
+				div(class="form-row")
+					div(class="form-group col-md-6")
+						label(for="codProj") Código de proyecto
+						input(type="text" id="codProj" name ="codProj" class="form-control" placeholder="PROY-XXXX")
+					div(class="form-group col-md-6")
+						label(for="nameProj") Idea y nombre
+						input(type="text" id="nameProj" name ="nameProj" class="form-control" placeholder="Idea XXXXX - XXXX")
+				div(class="form-group")
+					label(for="description") Descripción
+					textarea(type="text" id="description" name ="description" class="form-control" rows="3")
+				div(class="checkbox mb-3")
+					button(class="btn btn-lg btn-primary btn-block",type="submit") Registrar

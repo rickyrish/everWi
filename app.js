@@ -55,7 +55,6 @@ app.get("/registrar", function(req,res){
 	res.render("signup")
 })
 .post("/registrar",function(req,res){
-	console.log(req.fields);
 	var user = new User({
 							email : req.fields.inputEmail,
 							password: req.fields.inputPassword,
